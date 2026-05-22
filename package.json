@@ -14,7 +14,7 @@
     "tmux"
   ],
   "dependencies": {
-    "@opencode-ai/plugin": "latest"
+    "@opencode-ai/plugin": "^1.15.7"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
