@@ -1,6 +1,6 @@
 {
   "name": "@kevincojean/opencode-tmuxwindowrenaming",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Updates tmux window name based on OpenCode session",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
