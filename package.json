@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Updates tmux window name based on OpenCode session",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "files": ["dist", "README.md"],
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "watch": "tsc -p tsconfig.build.json --watch",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "opencode",
@@ -19,5 +23,8 @@
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }
