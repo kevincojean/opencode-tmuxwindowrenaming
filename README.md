@@ -13,37 +13,17 @@ An OpenCode plugin that automatically updates your tmux window name based on the
 
 ## Installation
 
-1. **Build the plugin:**
-   ```bash
-   cd opencode-tmux-plugin
-   npm install
-   npm run build
-   ```
+Add the plugin to your OpenCode config at `~/.config/opencode/opencode.json`:
 
-2. **Register the plugin:**
-   
-   Add the plugin to your OpenCode config at `~/.config/opencode/opencode.json`:
-   
-   ```json
-   {
-     "plugin": [
-       "/absolute/path/to/opencode-tmux-plugin"
-     ]
-   }
-   ```
-   
-   Or if you have other plugins:
-   
-   ```json
-   {
-     "plugin": [
-       "oh-my-opencode",
-       "/absolute/path/to/opencode-tmux-plugin"
-     ]
-   }
-   ```
+```json
+{
+  "plugin": [
+    "@kevincojean/opencode-tmuxwindowrenaming"
+  ]
+}
+```
 
-3. **Restart OpenCode** or start a new session to activate the plugin.
+Restart OpenCode or start a new session to activate the plugin.
 
 ## How It Works
 
@@ -105,4 +85,4 @@ All options are optional. Omitting an option uses its default value.
 - Look for plugin logs in OpenCode's output (they start with `[tmux-plugin]`)
 - Verify the plugin is registered in `~/.config/opencode/opencode.json`
 - Make sure the plugin is built: check that `dist/index.js` exists
-- If your tmux theme (e.g., Nord) shows a white/reversed window status bar, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md#common-issues) for a fix
+- If your tmux theme (e.g., Nord) shows a white/reversed window status bar, see [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md#common-issues) for a fix
