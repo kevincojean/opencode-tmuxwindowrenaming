@@ -87,7 +87,7 @@ const TmuxPlugin: Plugin = async (ctx, options?: TmuxPluginOptions) => {
   const updateTmuxWindowName = async (sessionName: string): Promise<void> => {
     try {
       const prefix = isWaitingForInput ? waitingIndicator : "";
-      const sanitizedName = sessionName.replace(/[^a-zA-Z0-9-_]/g, "-");
+      const sanitizedName = sessionName.toLowerCase().replace(/[^a-z0-9-_ ]/g, "").trim();
       const truncatedName = sanitizedName.slice(0, maxLength);
       const windowName = `${prefix}${namePrefix}${truncatedName}`;
 
