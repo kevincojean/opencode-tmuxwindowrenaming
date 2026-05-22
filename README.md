@@ -59,7 +59,7 @@ Example configuration in `opencode.json`:
 {
   "plugin": [
     [
-      "/absolute/path/to/opencode-tmux-plugin",
+      "@kevincojean/opencode-tmuxwindowrenaming",
       {
         "maxLength": 60,
         "waitingIndicator": "⏳ ",
