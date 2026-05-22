@@ -80,6 +80,16 @@ tmux display-message -p '#W'
    - Test manual rename: `tmux rename-window "test"`
    - Check for error messages in the plugin logs
 
+4. **Window status turns white / reverse video (Nord theme)**
+   - **Symptom**: Window status bar background flips from blue/dark to white when the plugin renames windows
+   - **Cause**: tmux defaults `window-status-activity-style` and `window-status-bell-style` to `reverse`. The `rename-window` command can trigger a bell flag (e.g., from shell/terminal title integration), which applies the `reverse` attribute — swapping fg/bg colors. Themes like Nord that don't override these defaults inherit the inversion.
+   - **Fix**: Add these lines to your `tmux.conf` **after** loading the Nord theme:
+     ```tmux
+     set -g window-status-activity-style none
+     set -g window-status-bell-style none
+     ```
+   - **References**: [nord-tmux#28](https://github.com/nordtheme/tmux/issues/28), [nord-tmux#91](https://github.com/nordtheme/tmux/pull/91)
+
 ## Quick Test After Restart
 
 After restarting OpenCode, look for these log messages in your terminal:

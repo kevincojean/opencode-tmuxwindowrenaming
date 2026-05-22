@@ -105,3 +105,4 @@ All options are optional. Omitting an option uses its default value.
 - Look for plugin logs in OpenCode's output (they start with `[tmux-plugin]`)
 - Verify the plugin is registered in `~/.config/opencode/opencode.json`
 - Make sure the plugin is built: check that `dist/index.js` exists
+- If your tmux theme (e.g., Nord) shows a white/reversed window status bar, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md#common-issues) for a fix
